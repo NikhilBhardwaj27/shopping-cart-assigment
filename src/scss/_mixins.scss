@@ -6,6 +6,10 @@
   padding: $padding-top-bottom $padding-left-right;
 }
 
+@mixin boxShadow($top,$bottom,$left,$right,$color){
+  box-shadow: $top $bottom $left $right $color;
+}
+
 @mixin flex($content: center, $direction: row, $align: stretch) {
   display: flex;
   justify-content: $content;

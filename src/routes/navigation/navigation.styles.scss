@@ -3,7 +3,7 @@
 .navigation-container {
   width: 100%;
   height: 70px;
-  box-shadow: 0 8px 6px -6px $boxShadowBorderColor;
+  @include boxShadow(0, 8px, 6px, -6px, $boxShadowBorderColor);
   @include flex(space-around);
 
   #logo-img {

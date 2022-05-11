@@ -1,0 +1,14 @@
+@import "../../../index.scss";
+
+.card-container {
+  width: 100%;
+  @include flex(space-around,row );
+}
+
+.normal-card {
+  @include boxShadow(0, 8px, 6px, -6px, $boxShadowBorderColor);
+}
+
+.dashed-border-card {
+  border: 1px dashed $grey;
+}

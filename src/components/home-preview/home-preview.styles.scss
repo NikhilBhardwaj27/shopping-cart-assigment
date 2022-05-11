@@ -1,0 +1,41 @@
+@import "../../index.scss";
+
+.home-preview-container {
+  width: auto;
+  .card-body {
+    @include flex(space-around, row, center);
+    @include padding(2%, 0px);
+
+    #category-image {
+      width: 500px;
+      height: 80%;
+    }
+
+    .category-item {
+      text-align: center;
+      @include flex(center, column, center);
+    }
+
+    @include media(1024px) {
+      #category-image {
+        width: 250px;
+        height: 50%;
+      }
+    }
+
+    @include media(500px) {
+      #category-image {
+        width: 150px;
+        height: 40%;
+      }
+
+      .category-name {
+        font-size: 12px;
+      }
+
+      .category-description {
+        font-size: 10px;
+      }
+    }
+  }
+}
