@@ -39,7 +39,7 @@ const Products = () => {
   const selectCategoryHandler = (category) => {
     let shallowCopy = [...categoriesCopy];
     shallowCopy.map((categoryCopy) => {
-      if (categoryCopy == category) {
+      if (categoryCopy.id == category.id) {
         if (categoryCopy.isSelected == true) {
           categoryCopy.isSelected = false;
           setCategoriesCopy(shallowCopy);
@@ -59,6 +59,12 @@ const Products = () => {
 
   return (
     <>
+      <div className="mobile-dropdown">
+        <CategoryDropDown
+          categories={categoriesCopy}
+          selectCategory={selectCategoryHandler}
+        />
+      </div>
       <div className="products-container">
         <div className="categories-list">
           {categoriesCopy &&
@@ -70,7 +76,7 @@ const Products = () => {
               />
             ))}
         </div>
-        
+
         {filteredProducts.length > 0 ? (
           <div className="products-list">
             {filteredProducts.map((product) => (

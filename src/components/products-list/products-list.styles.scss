@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .product-container {
-  font-size:14px;
+  font-size: 14px;
   #product-image {
     width: 150px;
     height: 150px;
@@ -26,7 +26,7 @@
   .description-container {
     max-height: 10vh;
     margin-top: 3px;
-    overflow:hidden;
+    overflow: hidden;
     background-color: $grey;
     @include padding(2px, 4px);
   }
@@ -35,7 +35,7 @@
     max-height: 20px;
   }
   .product-price {
-      padding-top: 10px
+    padding-top: 10px;
   }
 
   .product-price-container {
@@ -67,6 +67,9 @@
     * {
       font-size: 10px;
     }
+    .product-container {
+      width: 100%;
+    }
     .product-price-container {
       display: none;
     }
@@ -88,11 +91,5 @@
     .product-price-container-tablet {
       display: none;
     }
-  }
-}
-
-@include media-between(500px, 1280px) {
-  .product-container {
-    min-height: 10vh;
   }
 }

@@ -13,10 +13,29 @@
   .products-list {
     width: 75%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40vh,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(40vh, 1fr));
     column-gap: 3px;
     row-gap: 30px;
   }
+}
 
+.mobile-dropdown {
+  display: none;
+}
 
+@include media(499px) {
+  .categories-list {
+    display: none;
+  }
+  .mobile-dropdown {
+    display: block;
+  }
+  .products-container {
+    @include margin(0%,0%);
+    display:block;
+      
+    .products-list {
+      width: 100%;
+    }
+  }
 }
