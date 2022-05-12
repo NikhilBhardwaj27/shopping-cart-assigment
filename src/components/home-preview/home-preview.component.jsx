@@ -11,7 +11,7 @@ const HomePreview = ({ category }) => {
     <div className="home-preview-container">
       <Card cardType="normal">
         <div className="card-body">
-          {order%2==0 ? (
+          {(order % 2 == 0) ? (
             <>
               <img
                 id="category-image"
@@ -26,7 +26,6 @@ const HomePreview = ({ category }) => {
             </>
           ) : (
             <>
-             
               <div className="category-item">
                 <h2 className="category-name">{name}</h2>
                 <span className="category-description">{description}</span>

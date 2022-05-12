@@ -10,6 +10,7 @@ export const categoriesSuccess = (categoriesArray) =>
 export const categoriesFailed = (error) =>
   createAction(CATEGORIES_ACTION_TYPES.CATEGORIES_FAILED, error);
 
+
 export const fetchCategoriesAsync = () => {
   return async (dispatch) => {
     dispatch(fetchCategories());

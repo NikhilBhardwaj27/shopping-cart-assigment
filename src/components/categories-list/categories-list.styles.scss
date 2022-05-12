@@ -1,0 +1,24 @@
+@import '../../index.scss';
+
+.categories-list-container {
+    
+    @include flex(flex-start,column);
+
+    .category-name {
+        cursor:  pointer;
+        @include padding(10px, 10px);
+        border-bottom: 1px solid $dark-grey;
+        
+    }
+
+    .selected {
+        background-color: $silver;
+        color: white;
+    }
+
+    .not-selected {
+        color:$silver;
+        background-color: none;
+    }
+    
+}

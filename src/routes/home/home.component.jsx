@@ -29,7 +29,12 @@ const Home = () => {
   useEffect(() => {
     dispatch(fetchBannerAsync());
     dispatch(fetchCategoriesAsync());
+
   }, []);
+
+  if(categories.length > 0){
+    categories.sort((categoryA,categoryB) => (categoryA.order - categoryB.order))
+  }
 
   return (
     <>
@@ -61,18 +66,17 @@ const Home = () => {
             )
           }
         >
-          {banners &&
-            banners.map((banner) => {
-              const { bannerImageAlt, bannerImageUrl, id } = banner;
-              return (
-                <div key={id}>
-                  <img
-                    alt={bannerImageAlt}
-                    src={require(`../../assets${bannerImageUrl}`)}
-                  />
-                </div>
-              );
-            })}
+          {banners.map((banner) => {
+            const { bannerImageAlt, bannerImageUrl, id } = banner;
+            return (
+              <div key={id}>
+                <img
+                  alt={bannerImageAlt}
+                  src={require(`../../assets${bannerImageUrl}`)}
+                />
+              </div>
+            );
+          })}
         </Carousel>
 
         {categories &&
