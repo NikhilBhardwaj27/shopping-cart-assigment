@@ -3,7 +3,6 @@
 .footer-container {
   width: 100%;
   background-color: $grey;
-  margin-top: -12px;
   @include padding(2px, 2px);
   @include flex(center);
 }

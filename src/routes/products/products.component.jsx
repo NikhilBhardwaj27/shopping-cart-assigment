@@ -12,7 +12,6 @@ const Products = () => {
   const { categories } = useSelector((state) => state.categories);
   const { products } = useSelector((state) => state.products);
   const dispatch = useDispatch();
-
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categoriesCopy, setCategoriesCopy] = useState([]);
 
@@ -20,7 +19,6 @@ const Products = () => {
     if (categories.length === 0) {
       dispatch(fetchCategoriesAsync());
     }
-
     dispatch(fetchProductsAsync());
   }, [dispatch]);
 
@@ -76,7 +74,6 @@ const Products = () => {
               />
             ))}
         </div>
-
         {filteredProducts.length > 0 ? (
           <div className="products-list">
             {filteredProducts.map((product) => (
