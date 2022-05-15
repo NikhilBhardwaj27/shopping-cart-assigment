@@ -1,0 +1,8 @@
+@import "../../index.scss";
+
+.footer-container {
+  width: 100%;
+  background-color: $grey;
+  @include padding(2px, 2px);
+  @include flex(center);
+}

@@ -1,0 +1,24 @@
+@import "../../../index.scss";
+
+.button-container {
+  background-color: $reddish-pink;
+  outline: none;
+  border: none;
+  color: $white;
+  cursor: pointer;
+
+  @include padding(10px, 20px);
+
+  &:hover {
+    background-color: $white;
+    color: $reddish-pink;
+    border: 1px solid $reddish-pink;
+    @include padding(9px,19px)
+  }
+  @include media(500px) {
+    .button-container {
+      @include padding(5px, 10px);
+      font-size: 10px;
+    }
+  }
+}

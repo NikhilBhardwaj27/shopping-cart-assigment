@@ -1,0 +1,11 @@
+@import '../../index.scss';
+
+
+.register-container {
+    @include flex(space-around,row);
+    @include margin(1%,10%);
+
+    .register-label {
+        margin-top: 3%;
+    }
+}

@@ -1,0 +1,25 @@
+@import "../../index.scss";
+
+.cart-item-container {
+  @include margin(2%, 0%);
+  
+  .cart-image-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cart-item-information {
+    h5 {
+      margin: 0;
+      @include padding(10px, 0px);
+    }
+    .cart-item-dec-inc {
+      @include flex(space-around, row);
+    }
+  }
+
+  .cart-item-total-price {
+    @include margin(5%, 0%);
+    @include flex(center, row, flex-end);
+  }
+}

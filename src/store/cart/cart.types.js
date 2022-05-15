@@ -1,0 +1,7 @@
+const CART_ACTION_TYPES = {
+    ADD_TO_CART: "cart/ADD_TO_CART",
+    REMOVE_FROM_CART: "cart/REMOVE_FROM_CART",
+    ADD_TO_CART_FAILED: "cart/ADD_TO_CART_FAILED",
+  };
+  export default CART_ACTION_TYPES;
+  

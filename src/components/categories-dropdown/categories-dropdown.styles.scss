@@ -1,0 +1,12 @@
+@import '../../index.scss';
+
+.dropdown-container {
+    width:100%;
+
+    #categories {
+        width: 100%;
+        @include padding(10px, 10px);
+        background-color: $reddish-pink;
+        color:$white;
+    }
+}
