@@ -26,36 +26,11 @@
       @include padding(5px, 5px);
     }
   }
-  .cart-container {
-    height: 40px;
-    background-color: $grey;
-    margin-top: 10px;
-    @include flex(space-around, row);
-
-    .cart-icon {
-      fill: $reddish-pink;
-      padding: 6px;
-    }
-    .cart-count {
-      padding: 8px;
-    }
-  }
 
   @include media(600px) {
     .nav-links-right-container,
     .nav-links-left-container .nav-link {
       display: none;
-    }
-    .cart-container {
-      height: 70px;
-      margin-top: 0px;
-
-      .cart-icon {
-        padding: 15px;
-      }
-      .cart-count {
-        padding: 20px;
-      }
     }
   }
 }

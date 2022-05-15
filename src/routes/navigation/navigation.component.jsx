@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { ReactComponent as Cart } from "../../assets/static/images/cart.svg";
+import AddToCart from "../../components/add-to-cart/add-to-cart.component";
 import "./navigation.styles.scss";
 
 const Navigation = () => {
@@ -32,10 +32,7 @@ const Navigation = () => {
             Register
           </Link>
 
-          <div className="cart-container">
-            <Cart className='cart-icon' />
-            <span className="cart-count">0 items</span>
-          </div>
+          <AddToCart />
         </div>
       </div>
       <Outlet />

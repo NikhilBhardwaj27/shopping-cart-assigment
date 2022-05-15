@@ -1,10 +1,18 @@
 import React from "react";
 import Button from "../ui/button/button.component";
 import Card from "../ui/card/card.component";
+import { useDispatch} from "react-redux";
+import { addToCartAsync } from "../../store/cart/cart.action";
 
 import "./products-list.styles.scss";
 
 const ProductsList = ({ product }) => {
+  const dispatch = useDispatch();
+
+  const handleBuyNow = (product) => {
+    dispatch(addToCartAsync(product))
+  };
+
   const { name, description, imageURL, price } = product;
   return (
     <div className="product-container">
@@ -19,21 +27,26 @@ const ProductsList = ({ product }) => {
             />
             <div className="description-mobile">
               <div className="description-container">
-                <span className="product-description">
-                  {description}
-                </span>
+                <span className="product-description">{description}</span>
               </div>
-              <Button>Buy Now @ Rs.{price}</Button>
+              <Button onClick={() => handleBuyNow(product)}>
+                Buy Now @ Rs.{price}
+              </Button>
             </div>
           </div>
 
           <div className="product-price-container">
             <span className="product-price">MRP Rs.{price}</span>
-            <Button>Buy Now</Button>
+            <Button onClick={() => handleBuyNow(product)}>Buy Now</Button>
           </div>
 
           <div className="product-price-container-tablet">
-            <Button style={{ width: "100%" }}>Buy Now @ Rs.{price}</Button>
+            <Button
+              style={{ width: "100%" }}
+              onClick={() => handleBuyNow(product)}
+            >
+              Buy Now @ Rs.{price}
+            </Button>
           </div>
         </div>
       </Card>

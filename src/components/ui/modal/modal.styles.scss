@@ -1,0 +1,60 @@
+@import "../../../index.scss";
+
+.modal-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba($color: $black, $alpha: 0.35);
+  @include flex(flex-end, row, flex-end);
+
+  .filled {
+    background-color: $light-grey;
+  }
+  .empty {
+    background-color: $white;
+  }
+  .modal-main {
+    width: 35vw;
+    height: 90vh;
+    margin-right: 10%;
+    .modal-header {
+      background-color: $light-black;
+      color: $white;
+      @include padding(15px, 15px);
+      @include flex(space-between, row, flex-end);
+
+      .modal-cross {
+        cursor: pointer;
+      }
+    }
+    .modal-body {
+      overflow-y: auto;
+      height: 67vh;
+    }
+    .modal-footer {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+}
+
+@include media-between(425px, 768px) {
+  .modal-container {
+    .modal-main {
+      width: 100vw;
+      margin-right: 0;
+    }
+  }
+}
+
+@include media(424px) {
+  .modal-container {
+    .modal-main {
+      width: 100vw;
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../index.scss";
+
+.cart-container {
+  height: 40px;
+  background-color: $grey;
+  margin-top: 10px;
+  cursor: pointer;
+  @include flex(space-around, row);
+  .cart-icon {
+    fill: $reddish-pink;
+    padding: 6px;
+  }
+  .cart-count {
+    padding: 8px;
+  }
+}
+
+.footer {
+  @include flex(space-around, column, space-around);
+}
+
+.empty-footer {
+  @include margin(0,5%)
+}
+.empty-cart {
+  @include flex(center, column, center);
+  height: 67vh;
+}
+
+.cart-body-image {
+  @include margin(0, 3%);
+  @include flex(space-around, row);
+  img {
+    width: 100px;
+    height: 50px;
+  }
+  img,
+  span {
+    @include padding(2%, 2%);
+  }
+}
+
+@include media(600px) {
+  .cart-container {
+    height: 70px;
+    margin-top: 0px;
+
+    .cart-icon {
+      padding: 15px;
+    }
+    .cart-count {
+      padding: 20px;
+    }
+  }
+}
